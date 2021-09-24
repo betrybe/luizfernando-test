@@ -17,5 +17,10 @@ class SimpleReport():
             ]
         data_validade_proxima = 'Data de validade mais próxima: {data}\n'\
             .format(data=validade['data_de_validade'].min())
-        formattext = data_fabricacao_antiga + data_validade_proxima
+        empresa_mais_prod_estocados = 'Empresa com maior quantidade de ' \
+            'produtos estocados: {data}\n'\
+            .format(data=df['nome_da_empresa'].value_counts().index[0])
+        formattext = data_fabricacao_antiga + data_validade_proxima\
+            + empresa_mais_prod_estocados
+
         return formattext
