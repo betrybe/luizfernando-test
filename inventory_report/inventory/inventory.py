@@ -7,11 +7,15 @@ class Inventory():
 
     @classmethod
     def import_data(self, path_file, type_report):
+        file = ''
         if path_file.endswith("csv"):
             file = methodfile.ReadCSV.load_file(path_file)
-            return self.__report(file, type_report)
+        elif path_file.endswith("json"):
+            file = methodfile.ReadJSON.load_file(path_file)
         else:
             print("Extensão não encontrada")
+
+        return self.__report(file, type_report)
 
     def __report(file, type):
         if type == "simples":
