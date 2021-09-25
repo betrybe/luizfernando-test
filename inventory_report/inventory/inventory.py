@@ -12,6 +12,8 @@ class Inventory():
             file = methodfile.ReadCSV.load_file(path_file)
         elif path_file.endswith("json"):
             file = methodfile.ReadJSON.load_file(path_file)
+        elif path_file.endswith("xml"):
+            file = methodfile.ReadXML.load_file(path_file)
         else:
             print("Extensão não encontrada")
 
