@@ -6,6 +6,7 @@ class CsvImporter(imp.Importer):
 
     def import_data(self, path_file):
         try:
-            ReadCSV.load_file(path_file)
-        except ValueError:
-            print("Arquivo inválido")
+            if(path_file.endwith("csv")):
+                return ReadCSV.load_file(path_file)
+        except ValueError as e:
+            raise Exception('Arquivo inválido') from e
