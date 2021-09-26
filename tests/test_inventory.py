@@ -8,7 +8,7 @@ def test_validar_importerdata_importar_um_arquivo_csv_simples():
                 "Empresa com maior quantidade de produtos estocados: "
                 "Target Corporation\n"
     )
-    report = Inventory.import_data('inventory_report/data/inventory.csv',
+    report = Inventory.import_data('../inventory_report/data/inventory.csv',
                                    'simples')
     assert expect == report
 
@@ -27,7 +27,7 @@ def test_validar_importerdata_importar_um_arquivo_csv_completo():
                 "- Moore Medical LLC: 1\n"
                 "- REMEDYREPACK: 1\n"
     )
-    report = Inventory.import_data('inventory_report/data/inventory.csv',
+    report = Inventory.import_data('../inventory_report/data/inventory.csv',
                                    'completo')
     assert report == expect
 
@@ -39,7 +39,7 @@ def test_validar_importerdata_importar_um_arquivo_json_simples():
                 "Empresa com maior quantidade de produtos estocados: "
                 "Target Corporation\n"
     )
-    report = Inventory.import_data('inventory_report/data/inventory.json',
+    report = Inventory.import_data('../inventory_report/data/inventory.json',
                                    'simples')
     assert report == expect
 
@@ -58,7 +58,7 @@ def test_validar_importerdata_importar_um_arquivo_json_completo():
                 "- Moore Medical LLC: 1\n"
                 "- REMEDYREPACK: 1\n"
     )
-    report = Inventory.import_data('inventory_report/data/inventory.json',
+    report = Inventory.import_data('../inventory_report/data/inventory.json',
                                    'completo')
     assert expect == report
 
@@ -70,7 +70,7 @@ def test_validar_importerdata_importar_um_arquivo_xml_simples():
                 "Empresa com maior quantidade de produtos estocados: "
                 "Target Corporation\n"
     )
-    report = Inventory.import_data('inventory_report/data/inventory.xml',
+    report = Inventory.import_data('../inventory_report/data/inventory.xml',
                                    'simples')
     assert expect == report
 
@@ -89,6 +89,6 @@ def test_validar_importerdata_importar_um_arquivo_xml_completo():
                 "- Moore Medical LLC: 1\n"
                 "- REMEDYREPACK: 1\n"
     )
-    report = Inventory.import_data('inventory_report/data/inventory.xml',
+    report = Inventory.import_data('../inventory_report/data/inventory.xml',
                                    'completo')
     assert expect == report
