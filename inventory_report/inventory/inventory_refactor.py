@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+from inventory_report.inventory.inventory import Inventory
 
 
 class InventoryRefactor(Iterator):
@@ -20,3 +21,8 @@ class InventoryRefactor(Iterator):
 
     def verify_instance(self, instance):
         return isinstance(instance, type)
+
+
+class LineReport():
+    def line_report(path, type):
+        Inventory.import_data(path, type)
