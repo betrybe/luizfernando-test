@@ -24,5 +24,6 @@ class InventoryRefactor(Iterator):
 
 
 class LineReport():
+    @classmethod
     def line_report(path, type):
         Inventory.import_data(path, type)
